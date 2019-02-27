@@ -86,7 +86,7 @@ Reproducibility는 중요하다. 특히 학계에서는.
 OpenAI가 아니라 ClosedAI라는 비아냥도 많았다.
 - 괜찮았던 [블로그](https://thegradient.pub/openai-please-open-source-your-language-model/): 오히려 최대한 공개하는 것이 위험을 줄일 수 있다는 주장. 포토샵이 무엇인지 모두가 아는 지금, 사람들은 사진이 조작될 수 있다는 것을 알고 있고, 그렇게 때문에 조작된 사진이 주는 여파가 상대적으로 적다는 것.
 
-다른 팀도 자원을 사용하면 모델을 만들 수 있긴 하다.
+다른 팀도 [자원을 사용하면 모델을 만들 수 있긴 하다](https://www.fast.ai/2019/02/15/openai-gp2/).
 방법을 공개하지 않은 건 아니니까.
 
 하지만,
