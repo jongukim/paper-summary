@@ -116,7 +116,10 @@ OpenAI는 Dota2 agent에 대해 비슷하게 모델 크기만 늘리는 실험�
 
 GPT(generative pretraining transformer)에 비해 10배 많은 데이터와 파라미터.
 
-Input은 그냥 Internet text(8M pages).
+Input은 Internet text로부터 수집.
+Reddit으로부터 45M outbound links를 추출. (3 karma 이상 받은 것만)
+이 데이터로부터 8M documents (40GB) text 작성.
+위키피디아 document는 일부러 제외.
 
 전체 trained parameters: 1.5B.
 
