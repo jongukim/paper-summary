@@ -1,7 +1,7 @@
 # OpenAI's DOTA 2 agents
 
 - OpenAI Blog
-  - ["OpenAI Five Finals"](https://openai.com/blog/openai-five-finals/)
+  - ["OpenAI Five Finals"](https://openai.com/blog/openai-five-finals/) (2019. 3. 26.)
   - ["How to train your OpenAI Five"](https://openai.com/blog/how-to-train-your-openai-five/) (2019. 4. 15.)
   - ["OpenAI Five"](https://openai.com/blog/openai-five/) (2018. 6. 25.)
   - ["OpenAI Five Benchmark: Results"](https://openai.com/blog/openai-five-benchmark-results/) (2018. 8. 6.)
@@ -47,8 +47,8 @@ OpenAI가 Dota2 5 vs 5 게임에 도전한 것
   - 각 히어로를 모두 고려한다면(x5) 900년
 - 개별 hero가 LSTM 네트워크를 가지는 방식
   - [Model arch](https://d4mucfpksywv.cloudfront.net/research-covers/openai-five/network-architecture.pdf)
-  - Hero 네트워크 간 연결은 없다
-    - "Team spirit"이라는 hyper-parameter를 두어 팀의 평균 reward와 내 reward 간의 가중치를 주는 정도로 설정
+  - Hero 네트워크 간 연결은 없음
+    - *Team spirit*이라는 hyper-parameter를 두어 <팀 평균 reward>와 <내 reward> 간의 가중치를 주는 정도로 설정
 - 초기에는 모든 스킬을 다 사용하도록 학습하진 못했음
 
 #### 대규모 학습
@@ -66,14 +66,14 @@ OpenAI가 Dota2 5 vs 5 게임에 도전한 것
 
 ### 블로그 작성 시점의 수준
 
-- 무엇을 먼저 해야 할지 판단하거나 파밍할 때를 보면 장기적인 전략에 대해 이해하고 있는 듯 보있음
+- 무엇을 먼저 해야 할지 판단하거나 파밍할 때를 보면 장기적인 전략에 대해 이해하고 있는 듯 보였음
 - 1 on 1을 학습할 때는 필수 전술(ex. creep blocking)에 대해 reward를 줬으나, 이후 실험에는 주지 않았음에도 2 vs 2에서 학습이 되는 모습 확인
 - 막타(last-hitting)에 약한 모습
 
 ### 사람과의 차이
 
 - 사람은 상황 파악을 위해 화면 이곳저곳을 봐야 하지만 OAI Five는 즉시 파악 가능
-  - 화면을 직접 보고 GPU를 통해 분석하는 방식 X
+  - 화면을 직접 보고 GPU를 통해 visually 분석하는 방식이 아님
   - API를 통해 상태값 직접 전달
 - OpenAI의 평균 reaction time은 80ms로, 사람보다 빠름
 
@@ -92,20 +92,20 @@ OpenAI가 Dota2 5 vs 5 게임에 도전한 것
 
 ### 본 게임
 
-- 훨씬 강한 상대
+- 프로와의 대결
 - 히어로를 직접 선택하지 않고 third-party가 선택
 - Single mortal courier를 사용하도록 룰 변경
   - 점차 [제한을 풀고 발전하는 agents](https://openai.com/content/images/2018/08/loss-1.svg)
 
 #### 본 게임 1
 
-- 아쉽게도 대회에서 초반 탈락한 팀, paiN Gaming과의 시합 ~~심심했던 듯~~
+- (대회에서 초반 탈락한 팀,) paiN Gaming과의 시합 ~~심심했던 듯~~
   - top 18 Dota 2 teams in the world
 - 51분 패
 
 #### 본 게임 2
 
-- 중국 유명 선수들의 조합팀
+- 중국 유명 선수들의 연합팀
 - 45분 패
 
 ### 학습 시 특이사항
@@ -142,6 +142,11 @@ OpenAI가 Dota2 5 vs 5 게임에 도전한 것
 > Supervised deep learning systems can only be as good as their training datasets, but in self-play systems, the available data improves automatically as the agent gets better.
 
 지도 학습은 데이터셋에 능력이 한정되지만 self-play system은 그렇지 않다.
+
+> It actually felt nice; my Viper gave his life for me at some point. He tried to help me, thinking “I’m sure she knows what she’s doing” and then obviously I didn’t. But, you know, he believed in me. I don’t get that a lot with [human] teammates. — Sheever
+> In fact, we’d considered doing a cooperative match at The International but assumed it’d require dedicated training.
+
+이기기 위해서는 협동이 필요하다.
 
 ### 그리고 또 하나 생각해볼 것
 
