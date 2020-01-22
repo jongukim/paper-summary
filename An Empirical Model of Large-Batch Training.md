@@ -37,21 +37,14 @@ OpenAI에서는 이 '적당한 batch size'를 *critical batch size*라고 표현
 맞다. 방향을 잘 잡았다면 그곳을 향해 더 많이 뛰어도 된다.
 즉, batch size가 클 때 learning rate를 더 크게 잡아도 괜찮다는 것이다.
 
-![](./pics/Empirical-figure2.png)
-(figure src: [2])
-
 그런데, 얼마나 많이 뛸 건가? minina를 건너뛸 수도 있다.
 Learning rate는 어려운 파라미터다.
-
-![](./pics/optimal_lr_batch.JPG)
 
 실제 실험에서, 배치가 크면 learning rate가 높아도 된다는 것이 보였다.
 배치 크기가 늘어날수록 정확한 방향을 찾아간다.
 
 재밌는 것은 초반에는 배치가 작아도 나름 잘 찾아가긴 한다는 것.
 갈수록 못찾는다.
-
-![](./pics/batch_speed_efficiency.JPG)
 
 배치가 크면 빠르게 학습.
 
